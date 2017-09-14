@@ -8,12 +8,17 @@ class Slides extends Component {
   renderLastSlide(index) {
     if (index === this.props.data.length - 1) {
       return (
-        <Button
-          title="Onwards!"
-          raised
-          buttonStyle={styles.buttonStyle}
-          onPress={this.props.onComplete}
-        />
+        <View>
+          <Button
+            title="Dribbble your Designers!"
+            raised
+            buttonStyle={styles.buttonStyle}
+            onPress={this.props.onComplete}
+          />
+          <Text style={styles.captionStyle}>
+            Dribbble is where designers get inspired and hired.
+          </Text>
+        </View>
       );
     }
   }
@@ -60,8 +65,16 @@ const styles = {
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 2,
   },
+  captionStyle: {
+    fontSize: 15,
+    color: 'white',
+    fontFamily: 'Helvetica',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    marginTop: 10
+  },
   buttonStyle: {
-    backgroundColor: '#0288D1',
+    backgroundColor: '#f683b6',
     marginTop: 15
   }
 };
