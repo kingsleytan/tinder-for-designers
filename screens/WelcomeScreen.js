@@ -1,6 +1,8 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { View, AsyncStorage } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { AppLoading } from 'expo';
 import Slides from '../components/Slides';
 
 const SLIDE_DATA = [
@@ -35,6 +37,10 @@ class WelcomeScreen extends Component {
   }
 
   render() {
+    if (_.isNull(this.state.token)) {
+      return <AppLoading />;
+    }
+
     return (
       <View
         style={{ flex: 1 }}
