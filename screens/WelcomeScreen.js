@@ -8,7 +8,7 @@ import Slides from '../components/Slides';
 const SLIDE_DATA = [
   { text: 'Welcome to Tinder for Designers App, swipe for your favourite designs!', color: '#fdd2d6' },
   { text: 'Use this to get desired designers', color: '#f683b6' },
-  { text: 'Set your location, then swipe away', color: '#282828' }
+  { text: 'Looking to hire a designer? Then swipe away', color: '#282828' }
 ];
 
 class WelcomeScreen extends Component {
@@ -25,7 +25,7 @@ class WelcomeScreen extends Component {
     let token = await AsyncStorage.getItem('fb_token');
 
     if (token) {
-      this.props.navigation.navigate('map');
+      this.props.navigation.navigate('deck');
       this.setState({ token });
     } else {
       this.setState({ token: false });
@@ -33,7 +33,7 @@ class WelcomeScreen extends Component {
   }
 
   onSlidesComplete = () => {
-    this.props.navigation.navigate('auth');
+    this.props.navigation.navigate('deck');
   }
 
   render() {
