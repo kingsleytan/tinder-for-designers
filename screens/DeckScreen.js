@@ -13,12 +13,14 @@ class DeckScreen extends Component {
     }
   };
 
+  componentWillMount() { this.props.fetchShots(); }
+
   render() {
     return (
       <View>
         <Button
           large
-          title="Show"
+          title="Show More"
           backgroundColor="#FF5EAA"
           icon={{ name: 'search' }}
           onPress={this.props.fetchShots}
@@ -28,5 +30,13 @@ class DeckScreen extends Component {
     );
   }
 }
+
+const styles = {
+  detailWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 10
+  }
+};
 
 export default connect(null, actions)(DeckScreen);
