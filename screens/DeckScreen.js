@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 
+import * as actions from '../actions';
 
 class DeckScreen extends Component {
   static navigationOptions = {
@@ -14,10 +16,17 @@ class DeckScreen extends Component {
   render() {
     return (
       <View>
+        <Button
+          large
+          title="Show"
+          backgroundColor="#FF5EAA"
+          icon={{ name: 'search' }}
+          onPress={this.props.fetchShots}
+        />
         <Text>DeckScreen</Text>
       </View>
     );
   }
 }
 
-export default DeckScreen;
+export default connect(null, actions)(DeckScreen);
