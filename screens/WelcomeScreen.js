@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, AsyncStorage } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Slides from '../components/Slides';
 
@@ -16,6 +16,19 @@ class WelcomeScreen extends Component {
       return <Icon name='explore' size={30} color={tintColor} />;
     }
   };
+
+  state = { token: null }
+
+  async componentWillMount() {
+    let token = await AsyncStorage.getItem('fb_token');
+
+    if (token) {
+      this.props.navigation.navigate('map');
+      this.setState({ token });
+    } else {
+      this.setState({ token: false });
+    }
+  }
 
   onSlidesComplete = () => {
     this.props.navigation.navigate('auth');
