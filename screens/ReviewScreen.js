@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { Button, Icon } from 'react-native-elements';
 
 
 class ReviewScreen extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: 'Review',
+    tabBarIcon: ({ tintColor }) => {
+      return <Icon name='favorite-border' size={30} color={tintColor} />;
+    },
+
+    headerRight:
+      <Button
+        title="Settings"
+        onPress={() => { navigation.navigate('settings'); }}
+        backgroundColor="rgba(0,0,0,0)"
+        color="rgba(0, 122, 255, 1)"
+      />
+  });
+
   render() {
     return (
       <View>
