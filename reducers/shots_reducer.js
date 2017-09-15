@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
   FETCH_SHOTS
 } from '../actions/types';
@@ -5,9 +6,9 @@ import {
 export default function(state = [], action) {
   switch (action.type) {
     case FETCH_SHOTS:
-      return [
-        action.payload, ...state
-      ];
+    return _.uniqBy([
+      action.payload, ...state
+    ], 'id');
     default:
       return state;
   }
