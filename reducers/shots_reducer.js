@@ -2,10 +2,14 @@ import {
   FETCH_SHOTS
 } from '../actions/types';
 
-export default function(state = {}, action) {
+const INITIAL_STATE = {
+  results: []
+};
+
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case FETCH_SHOTS:
-      return { shots: action.payload };
+      return action.payload;
     default:
       return state;
   }
