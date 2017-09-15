@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Linking, Dimensions, Image } from 'react-native';
+import { View, Text, ScrollView, Linking, Image } from 'react-native';
 import { Button, Card, Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
 

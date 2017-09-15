@@ -37,7 +37,7 @@ class DeckScreen extends Component {
 
   renderNoMoreCards = () => {
     return (
-      <Card title="No Shots">
+      <Card title="Get More Designs!">
         <Button
           title="See LIKED Designs"
           large
@@ -46,7 +46,7 @@ class DeckScreen extends Component {
           onPress={() => this.props.navigation.navigate('review')}
         />
         <Button
-          title="Show More"
+          title="Show Designs"
           large
           backgroundColor="#FF5EAA"
           icon={{ name: 'search' }}
@@ -81,7 +81,6 @@ class DeckScreen extends Component {
 }
 
 const styles = {
-
   imageStyle: {
     flex: 1
   },
