@@ -19,7 +19,7 @@ class DeckScreen extends Component {
   renderCard(shot) {
     const { images, title, likes_count, views_count, comments_count } = shot;
     return (
-      <Card title={shot.title}>
+      <Card title={title}>
         <View style={{ height: SCREEN_HEIGHT / 2 }}>
           <Image
             style={styles.imageStyle}
@@ -60,7 +60,13 @@ class DeckScreen extends Component {
     return (
       <View style={{ marginTop: 10 }}>
         <View>
-          <Text>{this.props.shots} this.props.shots</Text>
+        <Swipe
+          data={this.props.shots}
+          renderCard={this.renderCard}
+          renderNoMoreCards={this.renderNoMoreCards}
+          onSwipeRight={shot => this.props.likeShot(shot)}
+          keyProp={this.props.shots.id} //from API
+        />
         </View>
         <Button
           title="Show More"
@@ -89,7 +95,7 @@ const styles = {
 };
 
 function mapStateToProps({ shots }) {
-  return { shots };
+  return { shots: shots };
 }
 
 export default connect(mapStateToProps, actions)(DeckScreen);
