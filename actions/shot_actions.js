@@ -19,7 +19,7 @@ const buildShotsUrl = (id) => {
   return `${SHOT_ROOT_URL}${id}/shots?${query}`;
 };
 
-export const fetchShots = () => async dispatch => {
+export const fetchShots = (callback) => async dispatch => {
   try {
     let id = randomID();
     console.log(id);
@@ -28,6 +28,7 @@ export const fetchShots = () => async dispatch => {
     dispatch({ type: FETCH_SHOTS, payload: data });
     console.log(url);
     console.log(data);
+    callback();
   } catch(e) {
     console.error(e);
   }
