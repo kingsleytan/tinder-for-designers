@@ -37,13 +37,20 @@ class DeckScreen extends Component {
 
   renderNoMoreCards = () => {
     return (
-      <Card title="No More Shots">
+      <Card title="No Shots">
         <Button
-          title="Back To Map"
+          title="See LIKED Designs"
           large
-          icon={{ name: 'my-location' }}
+          icon={{ name: 'favorite-border' }}
+          backgroundColor="#282828"
+          onPress={() => this.props.navigation.navigate('review')}
+        />
+        <Button
+          title="Show More"
+          large
           backgroundColor="#FF5EAA"
-          onPress={() => this.props.navigation.navigate('map')}
+          icon={{ name: 'search' }}
+          onPress={this.onButtonPress}
         />
       </Card>
     );
@@ -68,12 +75,6 @@ class DeckScreen extends Component {
           keyProp={this.props.shots.id} //from API
         />
         </View>
-        <Button
-          title="Show More"
-          backgroundColor="#FF5EAA"
-          icon={{ name: 'search' }}
-          onPress={this.onButtonPress}
-        />
       </View>
     );
   }
@@ -82,9 +83,7 @@ class DeckScreen extends Component {
 const styles = {
 
   imageStyle: {
-    height: 300,
-    flex: 1,
-    width: null
+    flex: 1
   },
 
   detailWrapper: {
