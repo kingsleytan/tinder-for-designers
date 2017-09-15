@@ -12,7 +12,7 @@ class ReviewScreen extends Component {
 
     headerRight:
       <Button
-        title="Settings"
+        title="Clear"
         onPress={() => { navigation.navigate('settings'); }}
         backgroundColor="rgba(0,0,0,0)"
         color="rgba(0, 122, 255, 1)"
