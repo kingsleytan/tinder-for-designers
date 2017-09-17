@@ -156,3 +156,5 @@ Mock-up:
 <h2>
 <img src="assets/app/clear.png" width="200">
 </h2>
+
+** Created with :love_letter: by Kingsley Tan **
