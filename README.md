@@ -46,7 +46,7 @@ $ npm install --save <package name>
 
 ### WelcomeScreen:
 
-Mock-up:
+#### Mock-up:
 
 <img src="assets/welcome.png" width="200">
 
@@ -62,14 +62,14 @@ Mock-up:
 - If logged-in then redirect to `DeckScreen` (abbr: `deck`, as defined in `App.js`). All this process is hide under `AppLoading`, until the next component is being rendered.
 - All slides are rendered using `Slides.js`, which includes `styling` for slides, `ScrollView`, and to show button when last slide is rendered.
 
-- Outcome of WelcomeScreen:
+#### Outcome of WelcomeScreen:
 <h2>
 <img src="assets/app/welcome1.png" width="200"> <img src="assets/app/welcome2.png" width="200"> <img src="assets/app/welcome3.png" width="200">
 </h2>
 
 ### AuthScreen:
 
-Mock-up:
+#### Mock-up:
 
 <img src="assets/facebook.png" width="200">
 
@@ -82,13 +82,14 @@ Expo.Facebook.logInWithReadPermissionsAsync
 - Then the outcome of the action (`action.payload`) is stored in `auth_reducer.js`, and all the reducers are combined under `reducers/index.js` using `combineReducers`. In this case, it is combined as `auth`.
 - This `auth` reducer is mapped as `token` in `AuthScreen` using `mapStateToProps`, then `props` and `actions` are connected to the screen using `connect()` in react-redux library.
 
-- Outcome of AuthScreen:
+#### Outcome of AuthScreen:
 <h2>
 <img src="assets/app/fb1.png" width="200"> <img src="assets/app/fb2.png" width="200">
 </h2>
 
 ### DeckScreen
-Mock-up:
+
+#### Mock-up:
 
 <img src="assets/gallery.png" width="200"><img src="assets/search.png" width="200">
 
@@ -107,13 +108,14 @@ Mock-up:
 | onSwipeRight | Store the data as `LIKED_SHOT` |
 | keyProp | Define unique key to render cards |
 
-- Outcome of DeckScreen:
+#### Outcome of DeckScreen:
 <h2>
 <img src="assets/app/deck2.png" width="200"> <img src="assets/app/deck1.png" width="200">
 </h2>
 
 ### MapScreen
-Mock-up:
+
+#### Mock-up:
 
 <img src="assets/map.png" width="200">
 
@@ -122,13 +124,14 @@ Mock-up:
 
 (Original thought was to enable users to search designs based on location, however there are too little designers from Malaysia and time-constraint. So decided to leave this function first.)
 
-- Outcome of DeckScreen:
+#### Outcome of DeckScreen:
 <h2>
 <img src="assets/app/map.png" width="200">
 </h2>
 
 ### ReviewScreen
-Mock-up:
+
+#### Mock-up:
 
 <img src="assets/like.png" width="200"><img src="assets/search.png" width="200">
 
@@ -138,21 +141,22 @@ Mock-up:
 - These `likedShots` are then `connect`ed to `ReviewScreen`, and shown to users to review.
 - If user decided to hire a certain designer(s), user can press on button to open Dribbble page of the selected designer(s).
 
-- Outcome of DeckScreen:
+#### Outcome of DeckScreen:
 <h2>
 <img src="assets/app/like.png" width="200"> <img src="assets/app/website.png" width="200">
 </h2>
 
 
 ### SettingScreen
-Mock-up:
+
+#### Mock-up:
 
 <img src="assets/clear.png" width="200"><img src="assets/search.png" width="200">
 
 - Deleting `likedShots` is simply clearing off the data store in it. (`return []` in `likes_reducer`)
 - This action doesn't require to pass in any state or props, so `mapStateToProps` pass in `null` in `SettingScreen`.
 
-- Outcome of DeckScreen:
+#### Outcome of DeckScreen:
 <h2>
 <img src="assets/app/clear.png" width="200">
 </h2>
