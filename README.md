@@ -28,18 +28,16 @@
 
 ### WelcomeScreen:
 
-Mock-up: ![WelcomeScreen](assets/welcome.png)
+Mock-up:
+
+<img src="assets/welcome.png" width="200">
+
 - Consists of 3 slides to show some welcome greetings to user.
 - Content and color of slides are stored in WelcomeScreen.js/SLIDE_DATA
 - Color Scheme of Dribbble is Fuschia/White/Grey/Black:
-![fuschia](assets/color-scheme/fuschia.png)
-![white](assets/color-scheme/white.png)
-![grey](assets/color-scheme/grey.png)
-![black](assets/color-scheme/black.png)
+<img src="assets/color-scheme/fuschia.png" width="50">
+<img src="assets/color-scheme/white.png" width="50">
+<img src="assets/color-scheme/grey.png" width="50">
+<img src="assets/color-scheme/black.png" width="50">
 - Outcome of WelcomeScreen:
-<img src="assets/app/welcome1.png" width="200">
-<img src="assets/app/welcome2.png" width="200">
-<img src="assets/app/welcome3.png" width="200">
-
-![welcome2](assets/app/welcome2.png)
-![welcome3](assets/app/welcome3.png)
+<img src="assets/app/welcome1.png" width="200"> <img src="assets/app/welcome2.png" width="200"> <img src="assets/app/welcome3.png" width="200">
