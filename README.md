@@ -47,6 +47,7 @@ Mock-up:
 <img src="assets/color-scheme/black.png" width="50">
 </h2>
 - Condition checking: when APP starts up, check whether user is logged-in `AsyncStorage.getItem('fb_token')?`, if logged-in then redirect to `DeckScreen` (abbr: `deck`, as defined in `App.js`). All this process is hide under `AppLoading`, until the next component is being rendered.
+- All slides are rendered using `Slides.js`, which includes `styling` for slides, `ScrollView`, and to show button when last slide is rendered.
 
 - Outcome of WelcomeScreen:
 <h2>
@@ -65,5 +66,30 @@ Mock-up:
 
 - Outcome of AuthScreen:
 <h2>
-<img src="assets/app/fb1.png" width="200"> <img src="assets/app/fb2.png" width="200"> 
+<img src="assets/app/fb1.png" width="200"> <img src="assets/app/fb2.png" width="200">
+</h2>
+
+### DeckScreen
+Mock-up:
+
+<img src="assets/gallery.png" width="200"><img src="assets/search.png" width="200">
+
+- API calls are made using `Axios`, from Dribbble API end-point: https://api.dribbble.com/v1.
+- URL is refactored out by setting root URL, params, id separately; and put all these together as required URL using `qs` library.
+- `Shot_id` is randomized by assigning random number.
+- This action, `FETCH_SHOTS` is being exported to  `DeckScreen.js`. Once the button is pressed, this action will be called.
+- `Swipe.js` component is separated from the screen, this is to simplify the code and separation of concerns. `Animated.view` is to animate object(s) on screen, while `PanResponder` handles the gesture of user interaction (swipe left or right).
+- By calling `Swipe.js` into `DeckScreen.js`, following information are required:
+
+| Information | Description |
+| ------ | ------ |
+| data | Input data |
+| renderCard | Show data as cards for users to swipe |
+| renderNoMoreCards | Handles argument when no more card is available |
+| onSwipeRight | Store the data as `LIKED_SHOT` |
+| keyProp | Define unique key to render cards |
+
+- Outcome of DeckScreen:
+<h2>
+<img src="assets/app/deck2.png" width="200"> <img src="assets/app/deck1.png" width="200">
 </h2>
