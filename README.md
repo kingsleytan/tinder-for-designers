@@ -29,8 +29,17 @@ $ npm install --save <package name>
 
 ![Mock-up](assets/App-mockup.png)
 - Total 5 screens: WelcomeScreen, AuthScreen, DeckScreen, MapScreen, ReviewScreen & SettingScreen
+- Color Scheme of [Dribbble](https://dribbble.com/) is Fuschia/White/Grey/Black:
+<h2>
+<img src="assets/color-scheme/fuschia.png" width="50">
+<img src="assets/color-scheme/white.png" width="50">
+<img src="assets/color-scheme/grey.png" width="50">
+<img src="assets/color-scheme/black.png" width="50">
+</h2>
+
 
 ### App.js:
+
 - Define abbr for all screens and nested under `TabNavigator` or `StackNavigator` accordingly. Eg. `welcome` is `WelcomeScreen` and so forth.
 - Link-up react and redux store: import `store`, use `Provider` tag to wrap the whole `view container` & `MainNavigator`.
 - `lazyLoad` (or latest syntax `lazy`), is to delay the screen loading until the screen/object is being called.
@@ -43,14 +52,14 @@ Mock-up:
 
 - Consists of 3 slides to show some welcome greetings to user.
 - Content and color of slides are stored in `WelcomeScreen.js/SLIDE_DATA`
-- Color Scheme of Dribbble is Fuschia/White/Grey/Black:
-<h2>
-<img src="assets/color-scheme/fuschia.png" width="50">
-<img src="assets/color-scheme/white.png" width="50">
-<img src="assets/color-scheme/grey.png" width="50">
-<img src="assets/color-scheme/black.png" width="50">
-</h2>
-- Condition checking: when APP starts up, check whether user is logged-in `AsyncStorage.getItem('fb_token')?`, if logged-in then redirect to `DeckScreen` (abbr: `deck`, as defined in `App.js`). All this process is hide under `AppLoading`, until the next component is being rendered.
+
+- Condition checking: when APP starts up, check whether user is logged-in
+
+```sh
+ AsyncStorage.getItem('fb_token')?
+ ```
+
+- If logged-in then redirect to `DeckScreen` (abbr: `deck`, as defined in `App.js`). All this process is hide under `AppLoading`, until the next component is being rendered.
 - All slides are rendered using `Slides.js`, which includes `styling` for slides, `ScrollView`, and to show button when last slide is rendered.
 
 - Outcome of WelcomeScreen:
@@ -101,7 +110,7 @@ Mock-up:
 ### MapScreen
 Mock-up:
 
-<img src="assets/map.png" width="200"><img src="assets/search.png" width="200">
+<img src="assets/map.png" width="200">
 
 - Google Map API is embedded in `MapView` of Expo library.
 - Initial location set to Kuala Lumpur (`latitude: 3.1466, longitude: 101.6958`). `latitudeDelta` & `longitudeDelta` are to define how much we want the map to be zoomed into.
