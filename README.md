@@ -31,8 +31,8 @@
 ![WelcomeScreen](assets/welcome.png)
 - Consists of 3 slides to show some welcome greetings to user.
 - Content and color of slides are stored in WelcomeScreen.js/SLIDE_DATA
-- Color Scheme of Dribbble is Fuschia/Black/Grey/White:
+- Color Scheme of Dribbble is Fuschia/White/Grey/Black:
 ![fuschia](assets/color-scheme/fuschia.png)
-![black](assets/color-scheme/black.png)
-![grey](assets/color-scheme/grey.png)
 ![white](assets/color-scheme/white.png)
+![grey](assets/color-scheme/grey.png)
+![black](assets/color-scheme/black.png)
