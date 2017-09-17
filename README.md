@@ -20,3 +20,7 @@
 - [latlng-to-zip](https://www.npmjs.com/package/latlng-to-zip): For [`reverseGeocode`](https://developers.google.com/maps/documentation/geocoding/start) (coming soon)
 - [qs](https://www.npmjs.com/package/qs): For QueryString parsing and `stringify` library.
 - Note: To install the above packages, run `$ npm install --save <package name>`
+
+## APP Mock-up:
+
+![Mock-up](assets/App-mockup.png)
