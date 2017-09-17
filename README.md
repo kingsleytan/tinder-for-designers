@@ -157,4 +157,4 @@ Mock-up:
 <img src="assets/app/clear.png" width="200">
 </h2>
 
-** Created with :love_letter: by Kingsley Tan **
+**Created with :love_letter: by Kingsley Tan**
