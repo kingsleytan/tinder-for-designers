@@ -24,3 +24,15 @@
 ## APP Mock-up:
 
 ![Mock-up](assets/App-mockup.png)
+- Total 5 screens: WelcomeScreen, AuthScreen, DeckScreen, MapScreen, ReviewScreen & SettingScreen
+
+### WelcomeScreen:
+
+![WelcomeScreen](assets/welcome.png)
+- Consists of 3 slides to show some welcome greetings to user.
+- Content and color of slides are stored in WelcomeScreen.js/SLIDE_DATA
+- Color Scheme of Dribbble is Fuschia/Black/Grey/White:
+![fuschia](assets/color-scheme/fuschia.png)
+![black](assets/color-scheme/black.png)
+![grey](assets/color-scheme/grey.png)
+![white](assets/color-scheme/white.png)
