@@ -37,6 +37,6 @@ Mock-up: ![WelcomeScreen](assets/welcome.png)
 ![grey](assets/color-scheme/grey.png)
 ![black](assets/color-scheme/black.png)
 - Outcome of WelcomeScreen:
-![welcome1](assets/app/welcome1.png =100x20)
+<img src="assets/app/welcome2.png" width="200">
 ![welcome2](assets/app/welcome2.png)
 ![welcome3](assets/app/welcome3.png)
