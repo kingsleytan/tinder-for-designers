@@ -33,7 +33,7 @@ class WelcomeScreen extends Component {
   }
 
   onSlidesComplete = () => {
-    this.props.navigation.navigate('deck');
+    this.props.navigation.navigate('auth');
   }
 
   render() {
