@@ -40,4 +40,6 @@ Mock-up:
 <img src="assets/color-scheme/grey.png" width="50">
 <img src="assets/color-scheme/black.png" width="50">
 - Outcome of WelcomeScreen:
+<h1>
 <img src="assets/app/welcome1.png" width="200"> <img src="assets/app/welcome2.png" width="200"> <img src="assets/app/welcome3.png" width="200">
+</h1>
