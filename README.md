@@ -73,8 +73,13 @@ Mock-up:
 
 <img src="assets/facebook.png" width="200">
 
-- Uses Facebook API integrated in Expo, call `Expo.Facebook.logInWithReadPermissionsAsync`.
-- Facebook login actions are in `actions/auth_actions.js`, export 2 actions: `FACEBOOK_LOGIN_SUCCESS` `FACEBOOK_LOGIN_FAIL`. Then the outcome of the action (`action.payload`) is stored in `auth_reducer.js`, and all the reducers are combined under `reducers/index.js` using `combineReducers`. In this case, it is combined as `auth`.
+- Uses Facebook API integrated in Expo, call
+```sh
+Expo.Facebook.logInWithReadPermissionsAsync
+```
+
+- Facebook login actions are in `actions/auth_actions.js`, export 2 actions: `FACEBOOK_LOGIN_SUCCESS` `FACEBOOK_LOGIN_FAIL`.
+- Then the outcome of the action (`action.payload`) is stored in `auth_reducer.js`, and all the reducers are combined under `reducers/index.js` using `combineReducers`. In this case, it is combined as `auth`.
 - This `auth` reducer is mapped as `token` in `AuthScreen` using `mapStateToProps`, then `props` and `actions` are connected to the screen using `connect()` in react-redux library.
 
 - Outcome of AuthScreen:
