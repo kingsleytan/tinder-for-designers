@@ -133,7 +133,7 @@ Expo.Facebook.logInWithReadPermissionsAsync
 
 #### Mock-up:
 
-<img src="assets/like.png" width="200"><img src="assets/search.png" width="200">
+<img src="assets/review.png" width="200">
 
 - `LIKE_SHOT` action is defined in `shot_actions.js`, and the `action.payload` is wired to `likes_reducer.js`.
 - In `likes_reducer.js` all the designs liked by user (swipe card(s) to the right), will be expanded into existing data (`...state`).
@@ -151,7 +151,7 @@ Expo.Facebook.logInWithReadPermissionsAsync
 
 #### Mock-up:
 
-<img src="assets/clear.png" width="200"><img src="assets/search.png" width="200">
+<img src="assets/delete.png" width="200">
 
 - Deleting `likedShots` is simply clearing off the data store in it. (`return []` in `likes_reducer`)
 - This action doesn't require to pass in any state or props, so `mapStateToProps` pass in `null` in `SettingScreen`.
