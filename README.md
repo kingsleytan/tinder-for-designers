@@ -19,7 +19,11 @@
 - [Lodash](https://lodash.com/): For [AppLoading](https://docs.expo.io/versions/latest/sdk/app-loading.html)
 - [latlng-to-zip](https://www.npmjs.com/package/latlng-to-zip): For [`reverseGeocode`](https://developers.google.com/maps/documentation/geocoding/start) (coming soon)
 - [qs](https://www.npmjs.com/package/qs): For QueryString parsing and `stringify` library.
-- Note: To install the above packages, run `$ npm install --save <package name>`
+- Note: To install the above packages, run:
+
+```sh
+$ npm install --save <package name>
+```
 
 ## APP Mock-up:
 
@@ -92,4 +96,49 @@ Mock-up:
 - Outcome of DeckScreen:
 <h2>
 <img src="assets/app/deck2.png" width="200"> <img src="assets/app/deck1.png" width="200">
+</h2>
+
+### MapScreen
+Mock-up:
+
+<img src="assets/map.png" width="200"><img src="assets/search.png" width="200">
+
+- Google Map API is embedded in `MapView` of Expo library.
+- Initial location set to Kuala Lumpur (`latitude: 3.1466, longitude: 101.6958`). `latitudeDelta` & `longitudeDelta` are to define how much we want the map to be zoomed into.
+
+(Original thought was to enable users to search designs based on location, however there are too little designers from Malaysia and time-constraint. So decided to leave this function first.)
+
+- Outcome of DeckScreen:
+<h2>
+<img src="assets/app/map.png" width="200">
+</h2>
+
+### ReviewScreen
+Mock-up:
+
+<img src="assets/like.png" width="200"><img src="assets/search.png" width="200">
+
+- `LIKE_SHOT` action is defined in `shot_actions.js`, and the `action.payload` is wired to `likes_reducer.js`.
+- In `likes_reducer.js` all the designs liked by user (swipe card(s) to the right), will be expanded into existing data (`...state`).
+- `lodash` library is called to make sure the data is not duplicated (`_.uniqBy([<data>], 'id')`).
+- These `likedShots` are then `connect`ed to `ReviewScreen`, and shown to users to review.
+- If user decided to hire a certain designer(s), user can press on button to open Dribbble page of the selected designer(s).
+
+- Outcome of DeckScreen:
+<h2>
+<img src="assets/app/like.png" width="200"> <img src="assets/app/website.png" width="200">
+</h2>
+
+
+### SettingScreen
+Mock-up:
+
+<img src="assets/clear.png" width="200"><img src="assets/search.png" width="200">
+
+- Deleting `likedShots` is simply clearing off the data store in it. (`return []` in `likes_reducer`)
+- This action doesn't require to pass in any state or props, so `mapStateToProps` pass in `null` in `SettingScreen`.
+
+- Outcome of DeckScreen:
+<h2>
+<img src="assets/app/clear.png" width="200">
 </h2>
