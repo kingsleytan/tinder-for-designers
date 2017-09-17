@@ -36,7 +36,7 @@ Mock-up:
 - Content and color of slides are stored in WelcomeScreen.js/SLIDE_DATA
 - Color Scheme of Dribbble is Fuschia/White/Grey/Black:
 <h2>
-<img src="assets/color-scheme/fuschia.png" width="50">
+<img src="assets/color-scheme/fuschia.png" width="50"; border-style="solid">
 <img src="assets/color-scheme/white.png" width="50">
 <img src="assets/color-scheme/grey.png" width="50">
 <img src="assets/color-scheme/black.png" width="50">
