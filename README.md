@@ -8,6 +8,12 @@
 
 - This is built using [Expo XDE](https://expo.io/). Expo XDE stands for Expo Development Environment, and it helps everyone start, develop and publish React Native projects.
 
+Scan the QR code below and run on your device:
+
+<h2>
+<img src="assets/app/qr.png" width="200">
+</h2>
+
 ## Packages used in this project:
 
 - [React Navigation](https://reactnavigation.org/): For `TabNavigator`, `StackNavigator`
